@@ -1,113 +1,132 @@
-import Image from 'next/image'
+// src
+import Hero from "@/components/Sections/Hero";
+import Card from "@/components/Cards/Card";
+import CardCTR from "@/components/Cards/CardCTR";
+
+export const metadata = {
+  title: "العميد للارضيات الخرسانية",
+  description:
+    "مكتب متخصص فى اعمال الارضيات الخرسانية مثل الخرسانه الهليكوبتر والخرسانه المطبوعة",
+};
 
 export default function Home() {
+  const servicesData: { img: string; title: string; description: string }[] = [
+    {
+      img: "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684562591/alamid/full_v2vc5e.svg",
+      title: "اعمال ارضيات خرسانية متكاملة",
+      description:
+        "نقوم بجميع العمل عنك فقط تقدم المواصفات المطلوبة للخرسانه، والسمك ونحن نقوم بتوريد وتسوية الخراسة وطباعتها وعمل اللازم ونقوم بتسليمك العمل المطلوب بجميع المواصفات التى تم كتابتها بالعقد.",
+    },
+    {
+      img: "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684562591/alamid/sub_ebmwwo.svg",
+      title: "مصنعية الاعمال",
+      description:
+        "انت تقدم الخرسانه، والسمك المطلوب ونحن نقدم لك افضل طاقم والمعدات اللازمه ونقوم بتسليمك الارضيات بالمواصفات المطلوبه سواء كانت ارضيات مطبوعة او ارضيات هليكوبتر",
+    },
+  ];
+  const productsData: {
+    img: string;
+    title: string;
+    description: string;
+    url: string;
+  }[] = [
+    {
+      img: "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684562644/alamid/stamped-concrete-pool_om9kfa.jpg",
+      title: "ارضيات خرسانية مطبوعة",
+      description:
+        "الارضيات الخرسانية المطبوعة احد اشهر انواع الارضيات التي يمكنك استخدامها للحدائق والاماكن المفتوحة والارصفة. يمكنك الاخيار بين اشكالها المتنوعة مع امكانية تغيير الوان السطح من لون الخرسانه الرصاصي الي اي لون يكون متناسق مع الاماكن المحيطة.",
+      url: "/services/stamped-concrete",
+    },
+    {
+      img: "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684562623/alamid/helicopter_kk5z7j.webp",
+      title: "ارضيات خرسانية هليكوبتر",
+      description:
+        "الارضيات الخرسانية الهليكوبتر احد اشهر انواع الارضيات التي يمكنك استخدامها لارضيات الادوار السفلية او القبو “بادروم” او ارضيات المصانع والمحطات البنزين والميناء، وتفضل دائما في الامكان التي يكون عليها ضغط كبير لانها تتحمل وسهله التنظيف.",
+      url: "/services/helicopter-concrete",
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    <main className="">
+      {/* HERO SECTION */}
+      <Hero
+        img={
+          "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684562576/alamid/concrete_ljvdc3.jpg"
+        }
+      />
+      {/* Services */}
+      <div className=" max-w-[1200px] xl:m-auto m-5">
+        <section className=" my-14">
+          <div className=" text-center mb-10">
+            <h2 className="text-[24px] font-bold text-green-900">
+              الخدمات التى نقدمها
+            </h2>
+            <p>لدينا نوعين من الخدمات التى يمكنك الاستمتاع بها</p>
+          </div>
+          <div className=" grid grid-cols-1 md:grid-cols-2 items-start">
+            {servicesData.map(
+              (
+                {
+                  img,
+                  title,
+                  description,
+                }: { img: string; title: string; description: string },
+                i: number
+              ) => {
+                return (
+                  <Card
+                    key={i}
+                    img={img}
+                    title={title}
+                    description={description}
+                  />
+                );
+              }
+            )}
+          </div>
+        </section>
+        {/* Products */}
+        <section className=" my-14">
+          <div className=" text-center mb-10 flex flex-col gap-2 justify-center items-center ">
+            <h2 className="text-[24px] font-bold text-green-900">
+              انواع الارضيات الخرسانية
+            </h2>
+            <p className=" max-w-[700px] mx-5 m-auto">
+              نقدم نوعان من الارضيات الخرسانية التي يمكنك استخدامها في منازلك او
+              مصنعك او لاي مساحة من الارض تريدها تسويتها او تجهيزها للتحمل احمال
+              ثقيلة او استخدام كثيف لهذه الرضيات.
+            </p>
+          </div>
+          <div className=" grid grid-cols-1 md:grid-cols-2 items-start gap-5">
+            {productsData.map(
+              (
+                {
+                  img,
+                  title,
+                  description,
+                  url,
+                }: {
+                  img: string;
+                  title: string;
+                  description: string;
+                  url: string;
+                },
+                i: number
+              ) => {
+                return (
+                  <CardCTR
+                    key={i}
+                    img={img}
+                    title={title}
+                    description={description}
+                    url={url}
+                  />
+                );
+              }
+            )}
+          </div>
+        </section>
       </div>
     </main>
-  )
+  );
 }

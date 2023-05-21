@@ -1,7 +1,8 @@
+import Navigation from "@/components/Headers/nav";
 import "./globals.css";
 import { Cairo } from "next/font/google";
 
-const inter = Cairo({ subsets: ["latin"] });
+const inter = Cairo({ subsets: ["arabic"] });
 
 export const metadata = {
   title: "amidco",
@@ -14,8 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ar" dir="rtl">
+      <body className={inter.className}>
+        <div className=" bg-white border-b-2 border-green-900  sticky top-0 left-0 right-0 z-50">
+          <Navigation />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
