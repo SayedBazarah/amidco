@@ -45,7 +45,7 @@ export default async function Page({}: Props) {
   );
 }
 
-export function getAllPosts() {
+function getAllPosts() {
   //Array for storing All posts data
   const postsData: {
     title: string;
