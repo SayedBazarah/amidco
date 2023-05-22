@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={inter.className}>
-        <div className=" bg-white border-b-2 border-green-900  sticky top-0 left-0 right-0 z-50">
+        <div className=" bg-white  shadow-lg  sticky top-0 left-0 right-0 z-50">
           <Navigation />
         </div>
         {children}

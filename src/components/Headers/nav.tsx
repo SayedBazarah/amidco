@@ -104,6 +104,17 @@ export default function Navigation({}: Props) {
               onClick={() => {
                 setNavStatus(false);
               }}
+              href="/blog"
+              className=" hover:underline underline-offset-[6px]"
+            >
+              مقالات
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => {
+                setNavStatus(false);
+              }}
               href="/catalog"
               className=" hover:underline underline-offset-[6px]"
             >
