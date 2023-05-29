@@ -110,7 +110,7 @@ export default function Navigation({}: Props) {
               مقالات
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               onClick={() => {
                 setNavStatus(false);
@@ -120,7 +120,7 @@ export default function Navigation({}: Props) {
             >
               الكتالوج
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

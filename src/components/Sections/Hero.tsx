@@ -15,12 +15,13 @@ export default function Hero({ img }: Props) {
           مكتب متخصص فى اعمال الارضيات الخرسانية مثل الخرسانه الهليكوبتر
           والخرسانه المطبوعة
         </p>
-        <Link
-          href="/catalog"
+        <a
+          target="_blank"
+          href="https://www.drive.google.com/file/d/18KQ0GGS_l7jw7cqbZjZlMEQhWOZbgTTU/view"
           className="mt-5 bg-white text-green-900 px-10 py-[7px] rounded-sm hover:bg-green-900 hover:text-white"
         >
           الكتالوج
-        </Link>
+        </a>
       </div>
       <Image
         src={img}
