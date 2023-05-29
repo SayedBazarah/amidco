@@ -39,7 +39,7 @@ export default async function Page(props: Props) {
 }
 
 //Read Markdown file
-async function GetMarkDownFile(fileName: string | number) {
+function GetMarkDownFile(fileName: string | number) {
   try {
     let fileData = fs.readFileSync(
       `${process.cwd()}/src/posts/${fileName}.md`,

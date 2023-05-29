@@ -1,6 +1,7 @@
 import Navigation from "@/components/Headers/nav";
 import "./globals.css";
 import { Cairo } from "next/font/google";
+import Footer from "@/components/Footer/footer";
 
 const inter = Cairo({ subsets: ["arabic"] });
 
@@ -21,6 +22,9 @@ export default function RootLayout({
           <Navigation />
         </div>
         {children}
+        <div>
+          <Footer />
+        </div>
       </body>
     </html>
   );

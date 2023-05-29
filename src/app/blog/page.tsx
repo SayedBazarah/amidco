@@ -9,29 +9,29 @@ export default async function Page({}: Props) {
   const posts = await getAllPosts();
   if (!posts)
     return (
-      <div className="w-full h-[90vh] flex flex-col justify-center items-center gap-5 text-xl ">
+      <div className=" w-full h-[90vh] flex flex-col justify-center items-center gap-5 text-xl ">
         <p>لا يوجد مقال </p>
       </div>
     );
   return (
     <div>
-      <div className="text-center my-10">
+      <div className="text-center my-10 ">
         <h1 className=" text-[28px] font-bold text-green-900">نصائح وافكار </h1>
         <p>عن الارضيات الخرسانية المطبوعة والهليكوبتر</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 w-[90vw] max-w-[1100px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-7 w-[90vw] max-w-[1100px] mx-auto">
         {posts.map((post) => {
           return (
             <Link
               href={`/blog/${post.file}`}
-              className="hover:shadow-2xl shadow-lg rounded-sm"
+              className="hover:shadow-2xl shadow-lg rounded-sm grid"
             >
               <Image
                 src={post.img}
                 alt={post.title}
                 width={350}
-                height={200}
-                className="w-full object-cover max-h-[250px]"
+                height={400}
+                className="w-full object-cover max-h-[300px] "
               />
               <div className="px-3 pb-4 ">
                 <h3 className=" font-bold pt-3 pb-1">{post.title}</h3>
