@@ -49,81 +49,84 @@ export default function Home() {
   return (
     <main className="">
       {/* HERO SECTION */}
-      <Hero />
+      <Hero
+        img={
+          "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684562576/alamid/concrete_ljvdc3.jpg"
+        }
+      />
       {/* Services */}
-
-      <section className=" max-w-[1200px] xl:m-auto m-5 my-14">
-        <div className=" text-center mb-10">
-          <h2 className="text-[24px] font-bold text-green-900">
-            الخدمات التى نقدمها
-          </h2>
-          <p>لدينا نوعين من الخدمات التى يمكنك الاستمتاع بها</p>
-        </div>
-        <div className=" grid grid-cols-1 max-w-[600px] m-auto gap-4">
-          {servicesData.map(
-            (
-              {
-                img,
-                title,
-                description,
-              }: { img: string; title: string; description: string },
-              i: number
-            ) => {
-              return (
-                <Card
-                  key={i}
-                  img={img}
-                  title={title}
-                  description={description}
-                />
-              );
-            }
-          )}
-        </div>
-      </section>
-      <section className="h-[400px] bg-stamped bg-fixed bg-no-repeat bg-cover"></section>
-
-      {/* Products */}
-      <section className=" max-w-[1200px] xl:m-auto m-5 my-14">
-        <div className=" text-center mb-10 flex flex-col gap-2 justify-center items-center ">
-          <h2 className="text-[24px] font-bold text-green-900">
-            انواع الارضيات الخرسانية
-          </h2>
-          <p className=" max-w-[700px] mx-5 m-auto">
-            نقدم نوعان من الارضيات الخرسانية التي يمكنك استخدامها في منازلك او
-            مصنعك او لاي مساحة من الارض تريدها تسويتها او تجهيزها للتحمل احمال
-            ثقيلة او استخدام كثيف لهذه الرضيات.
-          </p>
-        </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 items-start gap-5">
-          {productsData.map(
-            (
-              {
-                img,
-                title,
-                description,
-                url,
-              }: {
-                img: string;
-                title: string;
-                description: string;
-                url: string;
-              },
-              i: number
-            ) => {
-              return (
-                <CardCTR
-                  key={i}
-                  img={img}
-                  title={title}
-                  description={description}
-                  url={url}
-                />
-              );
-            }
-          )}
-        </div>
-      </section>
+      <div className=" max-w-[1200px] xl:m-auto m-5">
+        <section className=" my-14">
+          <div className=" text-center mb-10">
+            <h2 className="text-[24px] font-bold text-green-900">
+              الخدمات التى نقدمها
+            </h2>
+            <p>لدينا نوعين من الخدمات التى يمكنك الاستمتاع بها</p>
+          </div>
+          <div className=" grid grid-cols-1 md:grid-cols-2 items-start">
+            {servicesData.map(
+              (
+                {
+                  img,
+                  title,
+                  description,
+                }: { img: string; title: string; description: string },
+                i: number
+              ) => {
+                return (
+                  <Card
+                    key={i}
+                    img={img}
+                    title={title}
+                    description={description}
+                  />
+                );
+              }
+            )}
+          </div>
+        </section>
+        {/* Products */}
+        <section className=" my-14">
+          <div className=" text-center mb-10 flex flex-col gap-2 justify-center items-center ">
+            <h2 className="text-[24px] font-bold text-green-900">
+              انواع الارضيات الخرسانية
+            </h2>
+            <p className=" max-w-[700px] mx-5 m-auto">
+              نقدم نوعان من الارضيات الخرسانية التي يمكنك استخدامها في منازلك او
+              مصنعك او لاي مساحة من الارض تريدها تسويتها او تجهيزها للتحمل احمال
+              ثقيلة او استخدام كثيف لهذه الرضيات.
+            </p>
+          </div>
+          <div className=" grid grid-cols-1 md:grid-cols-2 items-start gap-5">
+            {productsData.map(
+              (
+                {
+                  img,
+                  title,
+                  description,
+                  url,
+                }: {
+                  img: string;
+                  title: string;
+                  description: string;
+                  url: string;
+                },
+                i: number
+              ) => {
+                return (
+                  <CardCTR
+                    key={i}
+                    img={img}
+                    title={title}
+                    description={description}
+                    url={url}
+                  />
+                );
+              }
+            )}
+          </div>
+        </section>
+      </div>
     </main>
   );
 }

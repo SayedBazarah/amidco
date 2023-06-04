@@ -10,6 +10,12 @@ type Props = {
   searchParams: {};
 };
 
+export const metadata = {
+  title: "",
+  description:
+    "مكتب متخصص فى اعمال الارضيات الخرسانية مثل الخرسانه الهليكوبتر والخرسانه المطبوعة",
+};
+
 export default async function Page(props: Props) {
   const { data, content }: any = await GetMarkDownFile(props?.params?.title);
 
