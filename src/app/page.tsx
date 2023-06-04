@@ -63,7 +63,7 @@ export default function Home() {
             </h2>
             <p>لدينا نوعين من الخدمات التى يمكنك الاستمتاع بها</p>
           </div>
-          <div className=" grid grid-cols-1 md:grid-cols-2 items-start">
+          <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
             {servicesData.map(
               (
                 {
