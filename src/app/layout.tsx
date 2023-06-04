@@ -2,6 +2,7 @@ import Navigation from "@/components/Headers/nav";
 import "./globals.css";
 import { Cairo } from "next/font/google";
 import Footer from "@/components/Footer/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Cairo({ subsets: ["arabic"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
