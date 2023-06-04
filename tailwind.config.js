@@ -11,6 +11,9 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        hero: "url('https://res.cloudinary.com/dha2m9q8b/image/upload/v1684562576/alamid/concrete_ljvdc3.jpg')",
+        stamped:
+          "url('https://res.cloudinary.com/dha2m9q8b/image/upload/v1684578549/alamid/stamped-concrete-pool_ztflx4.jpg')",
       },
     },
   },

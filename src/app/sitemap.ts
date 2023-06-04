@@ -11,6 +11,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: `https://alamid.co/sitemap.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://alamid.co/privacy-policy`,
+      lastModified: new Date(),
+    },
+    {
+      url: `https://alamid.co/faqs`,
+      lastModified: new Date(),
+    },
+    {
       url: `https://alamid.co/services`,
       lastModified: new Date(),
     },
@@ -28,7 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
   data.push(...staticUrl);
-  console.log(data);
   return data;
 }
 

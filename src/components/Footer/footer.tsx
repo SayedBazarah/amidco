@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <div className="border-t-[1px] border-green-800 mt-10 pt-3">
+    <div className="border-t-[1px] border-green-800 mt-10 pt-3 z-50">
       <footer className="my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-[1200px] m-auto px-5 overflow-hidden">
         <section className=" ">
           <h4 className="font-bold text-xl mb-3">الخدمات</h4>
@@ -25,8 +25,12 @@ export default function Footer({}: Props) {
         <section className="">
           <h4 className="font-bold text-xl mb-3">روابط مهمة</h4>
           <ul>
-            <li>اسئلة شائعة</li>
-            <li>سياسة الخصوصية</li>
+            <li>
+              <Link href="/faqs">اسئلة شائعة</Link>
+            </li>
+            <li>
+              <Link href="/privacy-policy">سياسة الخصوصية</Link>
+            </li>
             <li>
               <Link href="/sitemap.xml">خريطة الموقع</Link>
             </li>
@@ -34,8 +38,22 @@ export default function Footer({}: Props) {
         </section>
         <section className="">
           <h4 className="font-bold text-xl mb-3">للاستفسار</h4>
-          <p>هاتف: 01000712170</p>
-          <p>البريد الالكتروني: info@alamid.co</p>
+
+          <a
+            href="https://wa.me/201000712170"
+            target="_blank"
+            className="font-bold text-slate-800 cursor-pointer"
+          >
+            هاتف: 01000712170
+          </a>
+          <br />
+          <a
+            href="mailto:info@alamid.co"
+            target="_blank"
+            className="font-bold text-slate-800 cursor-pointer"
+          >
+            البريد الالكتروني: info@alamid.co{" "}
+          </a>
         </section>
         <section className="">
           <iframe

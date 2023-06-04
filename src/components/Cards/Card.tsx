@@ -14,7 +14,7 @@ export default function Card({ img, title, description }: Props) {
         alt={title}
         width={650}
         height={350}
-        className="h-[250px] object-cover"
+        className="h-[250px] object-contain"
       />
       <h3 className="text-[20px] text-green-900 font-bold mt-10 mb-2">
         {title}
