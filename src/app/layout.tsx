@@ -3,6 +3,7 @@ import "./globals.css";
 import { Cairo } from "next/font/google";
 import Footer from "@/components/Footer/footer";
 import { Analytics } from "@vercel/analytics/react";
+import CallButton from "@/components/Common/callButton";
 
 const inter = Cairo({ subsets: ["arabic"] });
 
@@ -22,10 +23,11 @@ export default function RootLayout({
         <div className=" bg-white  shadow-lg  sticky top-0 left-0 right-0 z-50">
           <Navigation />
         </div>
-        {children}
-        <div>
-          <Footer />
+        <div className="relative">
+          {children}
+          <CallButton />
         </div>
+        <Footer />
         <Analytics />
       </body>
     </html>
