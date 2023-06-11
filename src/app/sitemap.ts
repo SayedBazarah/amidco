@@ -47,11 +47,11 @@ function getPostsTitles() {
   let sitemap: { url: string; lastModified: Date }[] = [];
   fs.readdirSync(path.join(process.cwd(), "src/posts"), "utf-8")
     .filter((p) => p.replace(/\.md$/, ""))
-    .map((p) =>
+    .map((p) => {
       sitemap.push({
-        url: `https://alamid.co/blog/${p}`,
+        url: `https://alamid.co/blog/${p.replace(/\.md$/, "")}`,
         lastModified: new Date(),
-      })
-    );
+      });
+    });
   return sitemap;
 }
